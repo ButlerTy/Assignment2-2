@@ -16,14 +16,18 @@
 
       //Event handler setup
       //1. Create an event handler on the window object for the load event 
-      
+      window.addEventListener("load");
 
       //2. Create an event handler on the window object for the mousemove event  
-
+      window.addEventListener("mousemove",mousemove);
         //3. Inside of the callback function of this event handler, create offset distances for X and Y from the mouse
+      mousemove();{
+        x = mousemove.offsetX;
+        y = mousemove.offsetY;
     
     //Move the spaceship towards the mouse 
     //4. Get the image element & store it in a variable 
+        var node = document.getElementById("spaceship")
     //5. move the image by setting the coordinates of left & top refer to slide .  Ex. node.style.left = your coordinates calculation here.  
     //Note node is the variable name you stored your image element in.
     //Note the left & top properties track the x & y coordinates respectively & must be set seperately.
@@ -36,7 +40,7 @@
     //Refer to https://www.w3schools.com/jsref/jsref_random.asp 
     //9. Concatenate the pixel unit to your calculation. Ex. + 'px';
       
-  
+      }
   //Move the alien away from the cursor when the cursor is moved close to the alien image.
   //10. Get the image element & store it in a variable 
 
