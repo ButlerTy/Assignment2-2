@@ -32,22 +32,22 @@
     //Note node is the variable name you stored your image element in.
     //Note the left & top properties track the x & y coordinates respectively & must be set seperately.
     //Coordinates calculation for left & top properties
-        node.style.left = event.clientX + 12;
-        node.style.top= event.clientY + 124;
+        node.style.left = event.clientX;
+        node.style.top= event.clientY;
     //6. Use the JS built-in function parseInt() to cast your calculation from a float to an int. Refer to https://www.w3schools.com/jsref/jsref_parseint.asp 
-        parseInt(node.style.left);
-        parseInt(node.style.top);
+       parseInt(node.style.left)
+       parseInt(node.style.top)
     //7. Get the current x & y coordinates & add the offset from step 3.
         event.clientX += offsetX;
         event.clientY += offsetY;
     //8. Use the JS built-in function Math.random() to add a random number to increment the movement of the image following the mouse. 
     // Ex. + (Math.random()*200 + 100))
     //Refer to https://www.w3schools.com/jsref/jsref_random.asp 
-        event.clientX += (math.random()*200);
-        event.clientY += (math.random()*200);
+        event.style.left = event.style.left + (math.random()*200);
+        event.style.top = event.style.top + (math.random()*200);
     //9. Concatenate the pixel unit to your calculation. Ex. + 'px';
-        event.clientX = event.clientX + "px";
-        event.clientY = event.clientY + "px"
+        event.style.left += 'px';
+        event.clientY += 'px';
       })
   //Move the alien away from the cursor when the cursor is moved close to the alien image.
   //10. Get the image element & store it in a variable 
